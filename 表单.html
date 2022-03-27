@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>信息统计</title>
+	</head>
+	<body>
+		<!-- 所有的表单要填写的数据都要放在form标签的嵌套中
+		    action  代表的是要传输给哪一个后台
+			method  代表的是传输过程中使用哪种形式，post：加密传输，get：不加密传输-->
+		<form action="" method="post">
+			账号：<input type="text" id="" placeholder="请输入您的账号" autofocus="autofocus" />
+			<br />
+			密码：<input type="password" />
+			<br />
+			<!-- 点击文字可以切换，用label标签，并且设置for属性和对应的单选按钮的ID属性值一致 -->
+			<!-- 必须给这一组单选按钮添加相同的name值，才可以实现单选效果 -->
+			<!-- 设置默认的单选按钮，要给单选按钮添加checked="checked" -->
+			性别：<input type="radio" name="sex" id="nan" checked="checked" /><label for="nan">男</label>
+			<input type="radio" name="sex" id="nv" /><label for="nv">女</label>
+			<input type="radio" name="sex" id="mi" /><label for="mi">保密</label>
+			<br />
+			<!-- 下拉菜单是select和option的组合 -->
+			<!-- 如果想设置多组下拉菜单，需要添加一个optgroup标签，并设置label属性作为提示文字 -->
+			<!-- 如果想设置默认选中的状态，则需给想选中的option设置seleced=‘selected’ -->
+			地址：<select name="">
+				<option value ="">北京</option>
+				<option selected="selected" value ="">上海</option>
+				<option value ="">江苏</option>
+				<option value ="">安徽</option>
+			</select>
+			<select name="">
+				<optgroup label="北京">
+					<option value ="">海淀区</option>
+					<option value ="">朝阳区</option>
+					<option value ="">昌平区</option>
+					<option value ="">顺义区</option>
+				</optgroup>
+				<optgroup label="上海">
+					<option selected="selected" value="">闵行区</option>					
+					<option value="">徐汇区</option>
+					<option value="">松江区</option>
+					<option value="">宝山区</option>
+				</optgroup>
+			</select>
+			<br />
+			<!-- textarea中不要使用rows cols规定行数列数，因为不同浏览器解析出来的效果不同，应该使用height width规定宽高 -->
+			介绍：<textarea rows="10" cols="20" placeholder="请输入文字"></textarea>
+			<br />
+			爱好：<input type="checkbox" id="cs" /><label for="cs">测试</label>
+			<input type="checkbox" id="cf" /><label for="cf">吃饭</label>
+			<input type="checkbox" id="sj" checked="checked" /><label for="sj">睡觉</label>
+			<br />
+			<!-- 必须设置value属性，否则浏览器之间有兼容性问题 -->
+			<input type="submit" value="提交" />
+			<input type="reset" value="重置" />
+			<input type="button" value="按钮一号" />
+			<button type="button">按钮2号</button>
+		</form>
+	</body>
+</html>
